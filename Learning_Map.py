@@ -1,11 +1,12 @@
-Learning_Map = {"1" : "Java" , "2" : "Python", "3": "Ruby"}
-def view_skills(Learning_Map):
+Learning_Map = {"Java" : "not_done" , "Python" : "not_done", "Ruby": "not_done"}
+
+def add_skills(skills_dict):
 	print(Learning_Map)
 
-def add_skills(Learning_Map):
-	calls = view_skills()
-	return calls
-	new_skill = input ("Add another skill: ")
+	new_skill = input("Add another skill: ")
+	Learning_Map[new_skill] = "not_done"
 
-	Learning_Map[new_skill] = not_done
-print(view_skills(Learning_Map))
+	print(new_skill + " skill added!")
+	print(Learning_Map)
+
+add_skills(Learning_Map)
